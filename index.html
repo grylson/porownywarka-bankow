@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porównywarka banków</title>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.min.css">
+<script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f3f8;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+th {
+  background: #0066cc;
+  color: #fff;
+}
+a.oferta {
+  background: #28a745;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+a.oferta:hover {
+  background: #218838;
+}
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Porównywarka kont osobistych</h1>
+
+<table id="tabelaBankow" class="display">
+  <thead>
+    <tr>
+      <th>Bank</th>
+      <th>Nazwa konta</th>
+      <th>Opłata miesięczna</th>
+      <th>Oprocentowanie</th>
+      <th>Przejdź do oferty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PKO BP</td>
+      <td>Konto za Zero</td>
+      <td>0 zł</td>
+      <td>1,5%</td>
+      <td><a class="oferta" href="https://www.pkobp.pl/" target="_blank">Zobacz ofertę</a></td>
+    </tr>
+    <tr>
+      <td>mBank</td>
+      <td>eKonto osobiste</td>
+      <td>0 zł</td>
+      <td>2%</td>
+      <td><a class="oferta" href="https://www.mbank.pl/" target="_blank">Zobacz ofertę</a></td>
+    </tr>
+    <tr>
+      <td>Santander Bank Polska</td>
+      <td>Konto Jakie Chcę</td>
+      <td>6 zł</td>
+      <td>1,8%</td>
+      <td><a class="oferta" href="https://www.santander.pl/" target="_blank">Zobacz ofertę</a></td>
+    </tr>
+    <tr>
+      <td>ING Bank Śląski</td>
+      <td>Konto Direct</td>
+      <td>0 zł</td>
+      <td>2,5%</td>
+      <td><a class="oferta" href="https://www.ing.pl/" target="_blank">Zobacz ofertę</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<footer>
+  Ostatnia aktualizacja: listopad 2025<br>
+  Dane mają charakter informacyjny — sprawdź aktualne warunki na stronie banku.
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  new DataTable('#tabelaBankow', {
+    pageLength: 5,
+    language: {
+      url: 'https://cdn.datatables.net/plug-ins/1.13.1/i18n/pl.json'
+    }
+  });
+});
+</script>
+
+</body>
+</html>
